@@ -1,0 +1,506 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+
+html body{
+    height: 100%;
+    width: 100%;
+}
+
+*::selection {
+    background-color: #fff;
+    color: #95c11e;
+  }
+  
+  body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    background: #95c11e;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+  
+    border-radius: 50px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+.cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+.cursor-blur{
+    height: 300px;
+    width: 300px;
+    background-color: #96c11e3a;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(40px);
+    z-index: 9;
+
+}
+
+/* ............Nav bar........... */
+
+.navbar{
+    height: 120px;
+    width: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+    gap: 35px;
+    position: fixed;
+    z-index: 99;
+}
+
+.navbar img{
+    height: 75px;
+
+}
+
+/* .........hero part ..background video.......... */
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+/* .............main content............ */
+
+.main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+
+/* ..............page-1............... */
+
+.page1{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+.page1 h1{
+     font-size: 112px;
+     font-weight: 900;
+     position: relative;
+}
+
+.page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: #000;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke: 2px #95C11E;
+    z-index: -1;
+}
+
+.page1 h2{
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.page1 p{
+    font-size: 20px;
+    font-weight: 400;
+    width: 40%;
+}
+.page1 .arrow {
+    height: 200px;
+    width: 200px;
+    background-color: transparent;
+    border: 2px solid #95c11e;
+    position: absolute;
+    display: flex; 
+    position: absolute; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+    /* left: -2%; */
+    z-index: 90;
+    /* scale: 1; */
+  }
+  .page1 .arrow i {
+    font-size: 50px;
+    
+  }
+  .page1 .arrow:hover {
+    scale: 0.4;
+    
+    background-color: #95c11e;
+}
+.page1 #div{
+    left: -12px;
+    top: 550px;
+}
+
+/* ..................page-2........... */
+
+.page2{
+    /* min-height: 100vh; */
+    width: 100%;
+    z-index: 10;
+    
+}
+
+.scroller{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;  
+    z-index: 10;
+    position: relative; 
+}
+
+.scroller::-webkit-scrollbar{
+    display: none;
+}
+
+.scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.scroller h4{
+    display: inline-block;
+    font-size: 80px;
+    font-weight: 800;
+    font-weight: gilroy;
+    margin-right: 10px;
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    transition: all linear 0.4s;
+    /* transition-duration: 600; */
+}
+
+.scroller h4:hover{
+    color: #bbfe02;
+    -webkit-text-stroke: 2px #bbfe02;
+
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+/* ..............about us part.......... */
+
+.about-us{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.about-us img{
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.about-us-in{
+    width: 40%;
+    text-align: center;
+}
+
+.about-us-in h3{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.about-us-in p{
+    font-size: 20px;
+    line-height: 20px;
+}
+
+/* ...............card part............. */
+
+.cards-container{
+    
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+}
+
+.card{
+    height: 80%;
+    width: 24%;
+    overflow: hidden;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center
+    /* transition: all ease 0.4s; */
+    
+    
+}
+
+#card1{
+    background-image: url(./card1.avif);
+
+}
+
+#card2{
+    background-image: url(./card2.webp);
+}
+
+#card3{
+    background-image: url(./card3.avif);
+}
+
+/* .............card part (overly wala).......... */
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    padding-top: 120px;
+    padding: 30px;
+    opacity: 0;
+    transition: all ease 0.4s;
+}
+
+.overlay h4{
+    color: #000;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.overlay p{
+    color: #000;
+    font-size: 18px;
+}
+
+.card:hover .overlay{
+    opacity: 1;
+}
+
+.card:hover{
+    transform:  rotate3d(-1, 1, 0, 20deg);
+}
+
+/* .............green div............. */
+
+.green-div{
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left bottom, #119F3A, #95C11E);
+}
+
+.green-div h4{
+    width: 45%;
+    font-size: 30px;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 40px;
+    text-align: center;
+
+}
+
+.green-div img{
+    height: 100%;
+    object-fit: cover;
+    width: 18%;
+}
+
+/* ...................page-3.............. */
+
+.page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.page3>p{
+    font-size: 35px;
+    font-weight: 700;
+    width: 60%;
+    line-height: 45px;
+    text-align: center;
+}
+
+.page3 img{
+    position: absolute;
+    height: 60px;
+}
+
+.page3 #colon1{
+    left: 15%;
+    top: 25%;
+}
+
+.page3 #colon2{
+    bottom: 30%;
+    right: 15%;
+}
+
+/* .....................page-4................... */
+
+.page4{
+    height: 50vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+}
+
+.elem{
+    height: 70%;
+    width: 26%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+
+.elem h2{
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #000 ;
+    transition: all ease 0.5s;
+    font-weight: 800;
+    position: absolute;
+    z-index: 10;
+}
+
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.4s;
+    scale: 1.1;
+
+}
+
+.elem:hover h2{
+    color: #fff;
+    background-color: transparent;
+}
+
+.elem:hover img{
+    scale: 1;
+}
+
+.page4 h1{
+    position: absolute;
+    font-size: 80px;
+    top: -1%;
+    font-weight: 900;
+    font-family: gilroy;
+    color: black;
+    -webkit-text-stroke: 2px #fff;
+}
+
+/* ................footer-section............. */
+
+.footer{
+    /* height: 40vh; */
+    width: 100%;
+    height: 40vh;
+    background-color: #95C11E;
+    background: linear-gradient(to left bottom #119F3A, #ACE022);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+    
+    /* padding: 0 80px; */
+    
+}
+
+.footer .dot-img{
+    width: 30%;
+    height: fit-content;
+    object-fit: cover;
+    height: 100%;
+    position: relative;
+    left: 0;
+    color: #fff;
+    opacity: 0.6;
+    transform: rotate(180deg);
+}
+
+.footer .f1{
+    position: absolute;
+    z-index:22;
+    width: 140px;
+    left: 10%;
+}
+
+.footer h4{
+    font-size: 25px;
+    color: black;
+    font-weight: 800;
+    line-height: 30px;
+}
+
+.footer p{
+    color: #000;
+    font-weight: 600;
+}
+
+
+
